@@ -1,7 +1,9 @@
-import axios, {post} from "axios";
-const express = require("express")
+// eslint-disable-next-line no-undef
+import express from "express";
+
+import cors from "cors";
+
 const app = express()
-const cors = require("cors")
 app.use(express.json());
 const port = 5174
 

@@ -1,0 +1,36 @@
+form {
+    display: flex; /* Arranges form elements horizontally */
+    flex-direction: column; /* Stacks elements vertically on top of each other */
+    gap: 10px; /* Adds spacing between form elements */
+    margin: 20px auto; /* Adds margin for better positioning */
+    width: fit-content; /* Adjusts width to fit content */
+    padding: 15px; /* Adds padding for better aesthetics */
+    border: 1px solid #ddd; /* Adds a thin border */
+    border-radius: 5px; /* Adds rounded corners */
+}
+
+label {
+    display: inline-block; /* Makes labels appear inline with inputs */
+    width: 100px; /* Sets a fixed width for labels */
+    text-align: left; /* Aligns label text to the right */
+}
+
+input[type="text"] {
+    width: 200px; /* Sets a width for input fields */
+    padding: 5px; /* Adds padding for better user experience */
+    border: 1px solid #ccc; /* Adds a thin border to inputs */
+    border-radius: 3px; /* Adds rounded corners to inputs */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green color for submit button */
+    color: white; /* White text color for submit button */
+    padding: 10px 20px; /* Adds padding for submit button */
+    border: none; /* Removes default border from button */
+    border-radius: 5px; /* Adds rounded corners to button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #45A049; /* Darker green on hover for submit button */
+}
