@@ -13,13 +13,11 @@ function SearchPage(){
         setPost({...post, [event.target.name] : event.target.value});
     };
 
-    function handleSubmit(event){
-        event.preventDefault();
+    const handleSubmit = async ()=>{
         console.log(post, typeof post);
-        axios.post("http://localhost:5173/submit-data", {post})
+        await axios.post("/send-data", {post})
             .then(response => console.log(response))
             .catch(error => console.log(error));
-
     }
 
     return (
