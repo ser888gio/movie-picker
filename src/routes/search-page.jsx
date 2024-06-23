@@ -1,6 +1,7 @@
 import {useState} from "react";
-import axios from 'axios'
-import "./search-page/index.css"
+import axios from 'axios';
+import "./search-page/index.css";
+
 
 function SearchPage(){
 
@@ -13,15 +14,16 @@ function SearchPage(){
         setPost({...post, [event.target.name] : event.target.value});
     };
 
-    const handleSubmit = async ()=>{
-        console.log(post, typeof post);
-        await axios.post("/send-data", {post})
+    const handleSubmit = async (e)=>{
+        e.preventDefault()
+        //console.log(post, typeof post);
+        await axios.post("/", {post})
             .then(response => console.log(response))
             .catch(error => console.log(error));
     }
 
     return (
-            <form onSubmit={handleSubmit} action="/submit-data">
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="genre">Genre: </label>
                 <input type="text" id="genre" name="genre" placeholder="Enter genre" onChange={handleInput}/>
                 <label htmlFor="year">Year: </label>

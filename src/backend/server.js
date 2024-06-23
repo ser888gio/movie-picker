@@ -1,19 +1,21 @@
 import express from "express";
-const app = express()
-app.use(express.json());
-const port = 5174
+const app = express();
+const port = 5000;
+
+
+app.use(express.urlencoded())
+app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.send("Server is ready")
+    res.json({message: "Server is ready"})
     }
 )
 
-//In vite.config i got deifned the path through /api
-app.post('/send-data', async (req, res) =>{
-    const genre = req.body.genre;
-    const year = req.body.year;
+app.post('/', (req, res) =>{
+    const data = req.body;
+    console.log(data);
 
-    res.send({message: `Genre ${genre} and year: ${year}`})
+    //res.send({message: `Genre ${data.genre} and year: ${year}`})
 })
 
 
